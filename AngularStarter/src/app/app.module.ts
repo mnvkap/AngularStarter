@@ -7,15 +7,22 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { SharedModule } from './shared/shared.module';
 import { HomePageComponent } from './home-page/home-page.component';
 
+import { enviornment } from './enviornments/enviornment.prod';
+
+//Firebase Imports 
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore'
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomePageComponent
-  ],
+  declarations: [ AppComponent, HomePageComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    AngularFireModule.initializeApp(enviornment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   providers: [
     provideAnimationsAsync()
