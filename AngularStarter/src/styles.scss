@@ -9,78 +9,77 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
-/* For use in _color-definitions.scss */
+$md-green: (
+    50 : #e2ebe8,
+    100 : #b8cdc6,
+    200 : #88aba0,
+    300 : #588979,
+    400 : #35705d,
+    500 : #115740,
+    600 : #0f4f3a,
+    700 : #0c4632,
+    800 : #0a3c2a,
+    900 : #052c1c,
+    A100 : #66ffb8,
+    A200 : #33ffa0,
+    A400 : #00ff88,
+    A700 : #00e67a,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
 
-$palette-green:
-rgb(226, 235, 232)
-rgb(184, 205, 198)
-rgb(136, 171, 160)
-rgb(88, 137, 121)
-rgb(53, 112, 93)
-rgb(17, 87, 64)
-rgb(15, 79, 58)
-rgb(12, 70, 50)
-rgb(10, 60, 42)
-rgb(5, 44, 28)
-rgb(102, 255, 184)
-rgb(51, 255, 160)
-rgb(0, 255, 136)
-rgb(0, 230, 122)
-;
-
-$palette-green-50: nth($palette-green, 1);
-$palette-green-100: nth($palette-green, 2);
-$palette-green-200: nth($palette-green, 3);
-$palette-green-300: nth($palette-green, 4);
-$palette-green-400: nth($palette-green, 5);
-$palette-green-500: nth($palette-green, 6);
-$palette-green-600: nth($palette-green, 7);
-$palette-green-700: nth($palette-green, 8);
-$palette-green-800: nth($palette-green, 9);
-$palette-green-900: nth($palette-green, 10);
-$palette-green-A100: nth($palette-green, 11);
-$palette-green-A200: nth($palette-green, 12);
-$palette-green-A400: nth($palette-green, 13);
-$palette-green-A700: nth($palette-green, 14);
-
-
-$palette-gold:
-rgb(247, 243, 235)
-rgb(234, 224, 206)
-rgb(220, 203, 173)
-rgb(206, 182, 140)
-rgb(196, 167, 116)
-rgb(185, 151, 91)
-rgb(178, 143, 83)
-rgb(170, 132, 73)
-rgb(162, 122, 64)
-rgb(147, 105, 47)
-rgb(255, 238, 218)
-rgb(255, 216, 167)
-rgb(255, 193, 116)
-rgb(255, 182, 90)
-;
-
-$palette-gold-50: nth($palette-gold, 1);
-$palette-gold-100: nth($palette-gold, 2);
-$palette-gold-200: nth($palette-gold, 3);
-$palette-gold-300: nth($palette-gold, 4);
-$palette-gold-400: nth($palette-gold, 5);
-$palette-gold-500: nth($palette-gold, 6);
-$palette-gold-600: nth($palette-gold, 7);
-$palette-gold-700: nth($palette-gold, 8);
-$palette-gold-800: nth($palette-gold, 9);
-$palette-gold-900: nth($palette-gold, 10);
-$palette-gold-A100: nth($palette-gold, 11);
-$palette-gold-A200: nth($palette-gold, 12);
-$palette-gold-A400: nth($palette-gold, 13);
-$palette-gold-A700: nth($palette-gold, 14);
+$md-gold: (
+    50 : #f0eee9,
+    100 : #dbd4c7,
+    200 : #c3b7a2,
+    300 : #aa9a7d,
+    400 : #988561,
+    500 : #866f45,
+    600 : #7e673e,
+    700 : #735c36,
+    800 : #69522e,
+    900 : #56401f,
+    A100 : #ffd397,
+    A200 : #ffbe64,
+    A400 : #ffa831,
+    A700 : #ff9d18,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$AngularStarter-primary: mat.define-palette(mat.$palette-green);
-$AngularStarter-accent: mat.define-palette(mat.$palette-gold, A200, A100, A400);
+$AngularStarter-primary: mat.define-palette($md-green);
+$AngularStarter-accent: mat.define-palette($md-gold, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $AngularStarter-warn: mat.define-palette(mat.$red-palette);
@@ -104,3 +103,4 @@ $AngularStarter-theme: mat.define-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
