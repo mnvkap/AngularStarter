@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { HomePageComponent } from './home-page/home-page.component';
 
 import { enviornment } from './enviornments/enviornment.prod';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //Firebase Imports 
 import { AngularFireModule } from '@angular/fire/compat';
@@ -18,15 +19,14 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
   declarations: [ AppComponent, HomePageComponent ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule,
     AngularFireModule.initializeApp(enviornment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule
   ],
-  providers: [
-    provideAnimationsAsync()
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
